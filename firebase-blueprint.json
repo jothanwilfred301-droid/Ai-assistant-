@@ -1,0 +1,105 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with preferences and autonomy settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "autonomyTier": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid"]
+    },
+    "MemoryItem": {
+      "title": "MemoryItem",
+      "description": "A persistent memory or preference item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "confidence": { "type": "number" },
+        "isSensitive": { "type": "boolean" },
+        "learnedFromCorrection": { "type": "boolean" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "category", "title", "content"]
+    },
+    "TaskItem": {
+      "title": "TaskItem",
+      "description": "A planned or active task with checkpoint status",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "status": { "type": "string" },
+        "priority": { "type": "string" },
+        "progress": { "type": "number" },
+        "requiresApproval": { "type": "boolean" },
+        "assignedAgent": { "type": "string" },
+        "deliveryPackageId": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "status"]
+    },
+    "DeliveryPackage": {
+      "title": "DeliveryPackage",
+      "description": "Organized deliverable package for completed tasks or projects",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "taskId": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "status": { "type": "string" },
+        "summary": { "type": "string" },
+        "items": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "type", "status"]
+    },
+    "VisualFeedback": {
+      "title": "VisualFeedback",
+      "description": "Visual learning comparison and feedback for video and motion deliverables",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "assetId": { "type": "string" },
+        "feedbackText": { "type": "string" },
+        "cameraChanges": { "type": "string" },
+        "captionChanges": { "type": "string" },
+        "titleAnimationChanges": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "feedbackText"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores user profile data"
+    },
+    "/users/{userId}/memories/{memoryId}": {
+      "schema": "MemoryItem",
+      "description": "Stores user persistent memories"
+    },
+    "/users/{userId}/tasks/{taskId}": {
+      "schema": "TaskItem",
+      "description": "Stores user planned and active tasks"
+    },
+    "/users/{userId}/deliveries/{deliveryId}": {
+      "schema": "DeliveryPackage",
+      "description": "Stores finished delivery packages"
+    },
+    "/users/{userId}/visualFeedback/{feedbackId}": {
+      "schema": "VisualFeedback",
+      "description": "Stores user visual learning critiques and correction rules"
+    }
+  }
+}

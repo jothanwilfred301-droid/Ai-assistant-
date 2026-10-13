@@ -1,0 +1,13 @@
+{
+  "name": "DAYMATE AI",
+  "description": "Your Personal AI. Your Projects. Your Progress. A personal AI operating system for mobile and daily execution.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "notifications",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>DAYMATE AI</title>
+    <meta name="description" content="Your Personal AI. Your Projects. Your Progress. A personal AI operating system for mobile and daily execution." />
+    <meta property="og:title" content="DAYMATE AI" />
+    <meta property="og:description" content="Your Personal AI. Your Projects. Your Progress. A personal AI operating system for mobile and daily execution." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="DAYMATE" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <script>
+      // Suppress Vite HMR WebSocket closed notifications in proxy/iframe environment
+      window.addEventListener('error', function (event) {
+        if (event && event.message && event.message.includes('WebSocket')) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('unhandledrejection', function (event) {
+        if (event && event.reason && String(event.reason).includes('WebSocket')) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500/20 selection:text-cyan-300 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

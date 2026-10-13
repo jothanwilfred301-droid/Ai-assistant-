@@ -1,0 +1,258 @@
+{
+  "memories": [
+    {
+      "id": "mem-1",
+      "category": "preference",
+      "title": "Mobile-First Briefings",
+      "content": "Prefers concise, actionable summaries on mobile. Bullet points with key metrics first.",
+      "tags": [
+        "ui",
+        "tone",
+        "mobile"
+      ],
+      "isSensitive": false,
+      "createdAt": "2026-10-11T07:02:20.608Z",
+      "updatedAt": "2026-10-11T07:02:20.609Z"
+    },
+    {
+      "id": "mem-2",
+      "category": "goal",
+      "title": "Launch DAYMATE AI Companion",
+      "content": "Build and deploy DAYMATE AI as an Android-first PWA with multi-agent planning and motion video workflows.",
+      "tags": [
+        "roadmap",
+        "android",
+        "daymate"
+      ],
+      "isSensitive": false,
+      "createdAt": "2026-10-10T07:02:20.609Z",
+      "updatedAt": "2026-10-10T07:02:20.609Z"
+    },
+    {
+      "id": "mem-3",
+      "category": "instruction",
+      "title": "Confirmation Gates for Code & Deployments",
+      "content": "Always request user confirmation before running destructive actions, code generation rewrites, or external API calls.",
+      "tags": [
+        "safety",
+        "approvals"
+      ],
+      "isSensitive": false,
+      "createdAt": "2026-10-12T07:02:20.609Z",
+      "updatedAt": "2026-10-12T07:02:20.609Z"
+    },
+    {
+      "id": "mem-4",
+      "category": "workflow",
+      "title": "Motion Production Standard Pipeline",
+      "content": "Follow the 12-stage pipeline: Brief -> Research -> Script -> Storyboard -> Shot List -> Visual Dev -> Asset Gen -> Timeline -> Motion -> Audio -> QC -> Export.",
+      "tags": [
+        "motion",
+        "video",
+        "creative"
+      ],
+      "isSensitive": false,
+      "createdAt": "2026-10-13T07:02:20.609Z",
+      "updatedAt": "2026-10-13T07:02:20.609Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "projectId": "proj-1",
+      "title": "Orchestrator System Verification",
+      "description": "Validate multi-agent delegation, speech synthesis, and checkpoint gates across Android devices.",
+      "priority": "high",
+      "status": "in_progress",
+      "assignedAgent": "Planner",
+      "progress": 65,
+      "deadline": "2026-10-15",
+      "dependencies": [],
+      "stages": [
+        {
+          "id": "stg-1",
+          "name": "Initialize memory and persona context",
+          "completed": true
+        },
+        {
+          "id": "stg-2",
+          "name": "Verify Gemini 3.8 Flash orchestration",
+          "completed": true
+        },
+        {
+          "id": "stg-3",
+          "name": "Implement audio stream and TTS playback",
+          "completed": true
+        },
+        {
+          "id": "stg-4",
+          "name": "Run security approval audit gate",
+          "completed": false
+        }
+      ],
+      "requiresApproval": true,
+      "deliverable": "DAYMATE AI Core Orchestration Architecture verified",
+      "createdAt": "2026-10-13T02:02:20.609Z",
+      "updatedAt": "2026-10-13T07:02:20.609Z"
+    },
+    {
+      "id": "task-2",
+      "projectId": "proj-2",
+      "title": "Sci-Fi Motion Teaser Script & Storyboard",
+      "description": "Draft 30s teaser narrative, camera direction, and kinetic typography for DAYMATE showcase video.",
+      "priority": "medium",
+      "status": "queued",
+      "assignedAgent": "Creative Director",
+      "progress": 20,
+      "deadline": "2026-10-17",
+      "dependencies": [
+        "task-1"
+      ],
+      "stages": [
+        {
+          "id": "stg-a",
+          "name": "Creative brief & pacing",
+          "completed": true
+        },
+        {
+          "id": "stg-b",
+          "name": "Storyboard generation",
+          "completed": false
+        },
+        {
+          "id": "stg-c",
+          "name": "Voiceover script & timing",
+          "completed": false
+        }
+      ],
+      "requiresApproval": false,
+      "deliverable": "Storyboard cards & synchronized audio transcript",
+      "createdAt": "2026-10-13T05:02:20.609Z",
+      "updatedAt": "2026-10-13T07:02:20.609Z"
+    },
+    {
+      "id": "task-3",
+      "projectId": "proj-1",
+      "title": "PWA Offline & Hardware Permission Audit",
+      "description": "Ensure microphone, camera, and notification permissions handle prompt/denial states gracefully.",
+      "priority": "urgent",
+      "status": "completed",
+      "assignedAgent": "Quality Controller",
+      "progress": 100,
+      "deadline": "2026-10-13",
+      "dependencies": [],
+      "stages": [
+        {
+          "id": "pwa-1",
+          "name": "Add Web App Manifest with safe-zone icons",
+          "completed": true
+        },
+        {
+          "id": "pwa-2",
+          "name": "Test offline status banners",
+          "completed": true
+        },
+        {
+          "id": "pwa-3",
+          "name": "Build device permission center",
+          "completed": true
+        }
+      ],
+      "requiresApproval": false,
+      "deliverable": "PWA Install Hook + Device Permission Center verified",
+      "createdAt": "2026-10-12T07:02:20.609Z",
+      "updatedAt": "2026-10-13T07:02:20.609Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "DAYMATE Mobile OS Launch",
+      "description": "Flagship personal AI operating system for mobile and daily progress.",
+      "goal": "Deliver complete personal assistant, planner, coder, and creative studio on Android.",
+      "deadline": "2026-10-20",
+      "category": "Product & System",
+      "status": "active",
+      "progress": 75,
+      "deliverables": [
+        "Responsive Android UI",
+        "Voice/Text Chat",
+        "Task Queue",
+        "Memory Manager"
+      ],
+      "createdAt": "2026-10-08T07:02:20.609Z"
+    },
+    {
+      "id": "proj-2",
+      "title": "Cyberpunk Motion Studio Reel",
+      "description": "Dynamic 30-second motion graphics video showcasing DAYMATE capabilities.",
+      "goal": "Produce multi-layer kinetic typography and AI video prompts for social launch.",
+      "deadline": "2026-10-27",
+      "category": "Creative Production",
+      "status": "active",
+      "progress": 40,
+      "deliverables": [
+        "12-Stage Video Brief",
+        "Shot List",
+        "Motion Canvas Render"
+      ],
+      "createdAt": "2026-10-11T07:02:20.609Z"
+    }
+  ],
+  "routines": [
+    {
+      "id": "rtn-1",
+      "type": "morning_brief",
+      "title": "Morning Intelligence Briefing",
+      "scheduledTime": "08:00",
+      "enabled": true,
+      "lastRun": "2026-10-13 08:00:00",
+      "summaryPrompt": "Summarize today top priorities, weather context, and active task progress."
+    },
+    {
+      "id": "rtn-2",
+      "type": "daily_planning",
+      "title": "Midday Milestone Calibration",
+      "scheduledTime": "13:00",
+      "enabled": true,
+      "summaryPrompt": "Review completed subtasks and calibrate upcoming deadlines."
+    },
+    {
+      "id": "rtn-3",
+      "type": "evening_review",
+      "title": "Evening Retrospective & Learning Capture",
+      "scheduledTime": "21:00",
+      "enabled": true,
+      "summaryPrompt": "Capture lessons learned, record durable corrections, and prepare tomorrow queue."
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-1",
+      "timestamp": "2026-10-13T04:02:20.609Z",
+      "action": "SYSTEM_BOOT",
+      "category": "Security",
+      "details": "DAYMATE OS initialized with server-side Gemini 3.8 security boundary.",
+      "approvedBy": "System",
+      "status": "success"
+    },
+    {
+      "id": "aud-2",
+      "timestamp": "2026-10-13T05:02:20.609Z",
+      "action": "MEMORY_STORED",
+      "category": "Memory",
+      "details": "Recorded durable rule: Confirmation gates for code & deployments.",
+      "approvedBy": "User",
+      "status": "success"
+    },
+    {
+      "id": "aud-3",
+      "timestamp": "2026-10-13T06:02:20.609Z",
+      "action": "TASK_STAGE_COMPLETED",
+      "category": "Task Queue",
+      "details": "Stage \"Verify Gemini 3.8 Flash orchestration\" marked complete.",
+      "approvedBy": "Planner Agent",
+      "status": "success"
+    }
+  ]
+}
